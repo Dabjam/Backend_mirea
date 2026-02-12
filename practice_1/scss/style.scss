@@ -1,0 +1,68 @@
+$back-color: #349;
+$text-color: white;
+$font-size: 18px;
+$border-rad: 4px;
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card-vis {
+    width: 300px;
+    height: 300px;
+    background-color: $back-color;
+    color: $text-color;
+    border-radius: 7px;
+}
+
+@mixin btn-vis {
+    background-color: white
+}
+
+body {
+    @include flex-center;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+.product-card {
+    @include flex-center;
+    
+    .card { 
+        @include card-vis;
+        position: relative;
+        padding: 20px;
+        text-align: center; 
+
+        &__photo { 
+            width: 200px;
+            height: 200px;
+            border-radius: $border-rad;
+            object-fit: cover;
+        }
+
+        &__header { 
+            background-color: rgb(21, 21, 52);
+            border-radius: $border-rad;
+            font-size: $font-size;
+            margin-top: 10px;
+        }
+
+        &__desc {
+             margin: 10px 0;
+        }
+    }
+}
+
+.btn-buy {
+    border-radius: $border-rad;
+    border: none;
+    &:hover {
+        @include btn-vis;
+        transform: scale(1.1, 1.1);
+    }
+}
+
