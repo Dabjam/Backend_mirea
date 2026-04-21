@@ -1,0 +1,52 @@
+<div class="page-grid">
+  <section class="panel hero-panel">
+    <div>
+      <p class="panel-kicker">Обзор</p>
+      <h2 class="section-title">Управляй задачами без перегруза</h2>
+      <p class="panel-text">Добавляй обычные заметки, планируй напоминания и продолжай работать даже офлайн.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Всего заметок</span>
+        <strong id="notes-count" class="stat-value">0</strong>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">С напоминанием</span>
+        <strong id="reminders-count" class="stat-value">0</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel forms-panel">
+    <div class="form-card">
+      <h3 class="form-title">Быстрая заметка</h3>
+      <form id="note-form" class="stack-form">
+        <label class="field-label" for="note-input">Текст заметки</label>
+        <input type="text" id="note-input" placeholder="Например: проверить контрольную работу" required>
+        <button class="button button-primary" type="submit">Добавить заметку</button>
+      </form>
+    </div>
+
+    <div class="form-card">
+      <h3 class="form-title">Напоминание</h3>
+      <form id="reminder-form" class="stack-form">
+        <label class="field-label" for="reminder-text">Текст напоминания</label>
+        <input type="text" id="reminder-text" placeholder="Например: отправить отчёт" required>
+        <label class="field-label" for="reminder-time">Дата и время</label>
+        <input type="datetime-local" id="reminder-time" required>
+        <button class="button button-secondary" type="submit">Сохранить с напоминанием</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="panel notes-panel">
+    <div class="notes-header">
+      <div>
+        <p class="panel-kicker">Список</p>
+        <h3 class="form-title">Текущие заметки</h3>
+      </div>
+      <span id="notes-summary" class="notes-summary">Пока пусто</span>
+    </div>
+    <ul id="notes-list" class="notes-list"></ul>
+  </section>
+</div>

@@ -1,0 +1,17 @@
+{
+  "name": "kr-3-notes-pwa",
+  "version": "1.0.0",
+  "description": "Контрольная работа №3: практики 13-18",
+  "main": "server.js",
+  "scripts": {
+    "https:setup": "powershell -ExecutionPolicy Bypass -File ./scripts/setup-https.ps1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "sharp": "^0.34.5",
+    "socket.io": "^4.8.1",
+    "web-push": "^3.6.7"
+  }
+}

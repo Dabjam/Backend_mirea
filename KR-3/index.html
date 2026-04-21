@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#4285f4">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>KR-3 Notes Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/icons/favicon-32x32.png" sizes="32x32" type="image/png">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand-box">
+        <div class="brand-mark">M</div>
+        <div>
+          <p class="brand-caption">KR-3 Workspace</p>
+          <h2 class="brand">Notes Board</h2>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button id="home-btn" class="nav-item active" type="button">Заметки</button>
+        <button id="about-btn" class="nav-item" type="button">О проекте</button>
+      </nav>
+
+      <section class="sidebar-card">
+        <p class="sidebar-label">Статус сервера</p>
+        <div id="socket-status" class="status-pill">Подключение...</div>
+      </section>
+
+      <div class="push-box">
+        <button id="enable-push" class="button button-primary push-btn" type="button">Разрешить системные уведомления</button>
+        <button id="disable-push" class="button button-secondary push-btn" type="button" style="display:none;">Отключить системные уведомления</button>
+      </div>
+    </aside>
+
+    <section class="workspace">
+      <header class="app-header">
+        <div>
+          <p class="app-badge">Progressive Web App</p>
+          <h1 class="app-title">Панель заметок</h1>
+          <p class="app-subtitle">Офлайн-режим, напоминания и синхронные уведомления в одном аккуратном интерфейсе.</p>
+        </div>
+      </header>
+
+      <main id="app-content" class="app-content"></main>
+    </section>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
